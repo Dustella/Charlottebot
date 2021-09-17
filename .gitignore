@@ -5,6 +5,8 @@
 # well
 data/
 src/plugins/./__pycache__/
+push.bat
+.devcontainer
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
