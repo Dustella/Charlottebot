@@ -42,8 +42,9 @@ jobs:
 #         instance-id: # optional, default is 
         # Container registry server url
         login-server: registry.cn-shanghai.aliyuncs.com
-        
     - name: docker build and push
+      env:
+        IMAGE_TAG: ${{ github.sha }}
       run: |
           docker build -f Dockerfile -t registry.cn-shanghai.aliyuncs.com/qbot/cbot .
           docker push registry.cn-shanghai.aliyuncs.com/qbot/cbot
