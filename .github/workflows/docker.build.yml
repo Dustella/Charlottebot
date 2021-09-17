@@ -35,9 +35,9 @@ jobs:
         uses: belon/docker-build-push@v4.0
         with:
           # Name of the Docker image
-          image: registry.cn-shanghai.aliyuncs.com/qbot/cbot
+          image: qbot/cbot
           # Tags override for Docker image
-          tags: registry.cn-shanghai.aliyuncs.com/qbot/cbot
+          # tags: registry.cn-shanghai.aliyuncs.com/qbot/cbot
           # Target Docker registry
           registry: registry.cn-shanghai.aliyuncs.com
           # Location of Dockerfile, if not Dockerfile in root directory
@@ -47,9 +47,9 @@ jobs:
           # Docker build arguments in format KEY=VALUE,KEY=VALUE
 #           buildArgs: # optional
           # Docker registry username
-          username: ${{secrets.username}}
+          username: ${{secrets.USERNAME}}
           # Docker registry password
-          password: ${{secrets.password}}
+          password: ${{secrets.PASSWORD}}
           # GitHub organization to push image to (if not current)
 #           gitHubOrg: # optional
         
