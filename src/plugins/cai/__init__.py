@@ -10,8 +10,3 @@ async def handle_cai(bot:Bot,event:GroupMessageEvent,state:T_State):
         await cai.finish("Dustella大菜狗！")
     else:
         await cai.finish("大佬谦虚啦！")
-
-cai=on_keyword({"嘉然"})
-@cai.handle()
-async def handle_cai(bot:Bot,event:GroupMessageEvent,state:T_State):
-    await cai.finish("嘉心糖给爷爬")
