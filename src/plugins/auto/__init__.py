@@ -15,13 +15,13 @@ async def autoi(bot:Bot,event:GroupMessageEvent):
         mjs=json.loads(event.json())['message']
         print(mjs)
         if len(mjs)==2:
-            text=json.loads(event.json())['message'][0]['data']['text'].replace('.','')
+            text=json.loads(event.json())['message'][0]['data']['text'].replace('.','').replace('。','')
             source_qq=event.sender.user_id
             target_qq=json.loads(event.json())['message'][1]['data']['qq']
             target_msg=f"[CQ:at,qq={source_qq}] {text}了[CQ:at,qq={target_qq}]！~"
             await auto.finish(Message(target_msg))
         elif len(mjs)==3:
-            text1=json.loads(event.json())['message'][0]['data']['text'].replace('.','')
+            text1=json.loads(event.json())['message'][0]['data']['text'].replace('.','').replace('。','')
             text2=json.loads(event.json())['message'][2]['data']['text']
             source_qq=event.sender.user_id
             target_qq=json.loads(event.json())['message'][1]['data']['qq']

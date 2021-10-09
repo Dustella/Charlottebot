@@ -1,17 +1,17 @@
-from nonebot import on_keyword
+from nonebot import on_command
 from nonebot.adapters.cqhttp import Bot,Event,Message
 from nonebot.typing import T_State
 from random import randint
 import httpx
 
 
-setu = on_keyword({"猫猫来"})
+setu = on_command('acgimage')
 
 @setu.handle()
 async def handle(bot: Bot, event: Event, state: T_State):
     async with httpx.AsyncClient() as client:
-        resp = await client.get('https://someacg.rocks/api/list?page=2')
-        imgurl = resp.json()["list"][randint(1,30)]["picUrl"]
+        resp = await client.get('https://someacg.rocks/api/random?detail=1')
+        imgurl = resp.json()["picUrl"]
         cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
         await setu.send(Message(cqimg))
 
