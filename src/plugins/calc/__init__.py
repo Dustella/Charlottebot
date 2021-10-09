@@ -6,8 +6,8 @@ calc=on_command('calc')
 
 @calc.handle()
 async def claaa(bot:Bot,event:MessageEvent):
-    if 'os' in event.get_message():return
-    if 'import' in event.get_message():return
+    ban_list={"os","import","open","delete","__"}
+    if str(event.get_message()) in ban_list: calc.finish()
     args=str(event.get_message()).strip()
     try:
         result=eval(args)
