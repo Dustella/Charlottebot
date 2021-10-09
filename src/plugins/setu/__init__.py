@@ -21,6 +21,6 @@ cats=on_keyword({"猫猫来","猫来"})
 async def cat(bot:Bot,event:Event):
     async with httpx.AsyncClient() as client:
         resp = await client.get('https://api.thecatapi.com/v1/images/search')
-        imgurl = resp.json()["url"]
+        imgurl = resp.json()[0]["url"]
         cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
         await setu.send(Message(cqimg))
