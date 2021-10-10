@@ -9,7 +9,7 @@ async def claaa(bot: Bot, event: MessageEvent):
     ban_list = {"os", "import", "open", "delete", "__"}
     for i in ban_list:
         if i in str(event.get_message()):
-            calc.finish("dangourous expression")
+            await calc.finish("dangourous expression")
     # handle dangourous situations
     
     args = str(event.get_message()).strip()
