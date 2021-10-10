@@ -7,6 +7,7 @@ data/
 src/plugins/./__pycache__/
 push.bat
 .devcontainer
+.vscode
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
