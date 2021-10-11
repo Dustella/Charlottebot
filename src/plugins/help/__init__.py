@@ -8,7 +8,7 @@ config = Config(**global_config.dict())
 help=on_command('help')
 
 @help.handle()
-async def help(bot:Bot, event:MessageEvent):
+async def help_text(bot:Bot, event:MessageEvent):
     help_text="""
     commands:
     /help: get help for bot
