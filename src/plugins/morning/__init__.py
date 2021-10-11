@@ -15,10 +15,3 @@ async def morni(bot:Bot,event:GroupMessageEvent):
     imgurl = "https://api.xingzhige.com/API/zwimg/api.php"
     cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
     await morn.finish(Message(cqimg))
-# Export something for other plugin
-# export = nonebot.export()
-# export.foo = "bar"
-
-# @export.xxx
-# def some_function():
-#     pass
