@@ -1,4 +1,3 @@
-from dataclasses import FrozenInstanceError
 from nonebot.adapters.cqhttp import Bot, MessageEvent
 from nonebot import on_command
 
@@ -6,7 +5,7 @@ calc = on_command('calc')
 
 @calc.handle()
 async def claaa(bot: Bot, event: MessageEvent):
-    ban_list = {"os", "import", "open", "delete", "__"}
+    ban_list = {"os", "import", "open", "delete", "__","eval"}
     for i in ban_list:
         if i in str(event.get_message()):
             await calc.finish("dangourous expression")
