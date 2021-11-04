@@ -8,7 +8,7 @@ from .config import Config
 global_config = get_driver().config
 config = Config(**global_config.dict())
 
-morn=on_startswith('早安')
+morn=on_startswith(("早安","午安","晚安"))
 
 @morn.handle()
 async def morni(bot:Bot,event:GroupMessageEvent):
