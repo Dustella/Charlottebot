@@ -19,9 +19,11 @@ async def help_text(bot:Bot, event:MessageEvent):
     /calc: calculate an expression
     /acgimage: gives an acg image
     /echo: echo the message
+    /whois [domain]: get whois information
     keywords:
     我好菜啊
     .[操作]@人
     猫猫来
+    早安
     """
     await help.finish(help_text)
