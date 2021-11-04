@@ -4,7 +4,7 @@ from nonebot.adapters.cqhttp.message import Message
 from nonebot import on_command
 
 
-beast = ['嗷', '呜', '啊', '~']
+beast = ['啦', 'la', '！', '~']
 
 
 def str2hex(text: str):
@@ -54,7 +54,7 @@ def wdecode(str):
     return hex2str(code)
 
 
-dec=on_command('ao')
+dec=on_command('la')
 
 @dec.handle()
 async def decode(bot:Bot,event:MessageEvent):
@@ -64,7 +64,7 @@ async def decode(bot:Bot,event:MessageEvent):
     tsend=Message(str(result))
     await dec.finish(tsend)
 
-enc=on_command('wu')
+enc=on_command('lla')
 
 @enc.handle()
 async def encode(bot:Bot,event=MessageEvent):

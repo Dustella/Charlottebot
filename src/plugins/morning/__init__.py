@@ -13,5 +13,5 @@ morn=on_startswith('早安')
 @morn.handle()
 async def morni(bot:Bot,event:GroupMessageEvent):
     imgurl = "https://api.xingzhige.com/API/zwimg/api.php"
-    cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl}]"
+    cqimg = f"[CQ:image,file=1.{imgurl.split('.')[1]},url={imgurl},cache=0]"
     await morn.finish(Message(cqimg))
