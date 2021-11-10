@@ -15,7 +15,7 @@ async def ping_ip(bot: Bot, event: MessageEvent):
     req_ping = {"host": str(event.message)}
     req_icp={"domain":str(event.message)}
     try:
-        response_ping = get(url="https://api.ooii.io/whois", params=req_ping).json()
+        response_ping = get(url="https://api.ooii.io/ping", params=req_ping).json()
         if response_ping['state'] == 1001:
             await whois.finish("域名错误")
         response_icp=get(url="https://api.ooii.io/beian/api.php",params=req_icp).json()
