@@ -22,8 +22,6 @@ async def autoi(bot: Bot, event: GroupMessageEvent):
     else:
         target_qq = json.loads(event.json())['message'][1]['data']['qq']
 
-
-
     if len(msgJson) == 3:
         text2 = json.loads(event.json())['message'][2]['data']['text']
     elif len(msgJson) == 1 or len(msgJson) == 2:
