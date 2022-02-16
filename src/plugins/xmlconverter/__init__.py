@@ -1,7 +1,7 @@
 # import nonebot
 from enum import auto
 from nonebot import get_driver,on_message
-from nonebot.adapters.cqhttp import GroupMessageEvent,Bot, Message
+from nonebot.adapters.onebot.v11 import GroupMessageEvent,Bot, Message
 from .config import Config
 import json
 

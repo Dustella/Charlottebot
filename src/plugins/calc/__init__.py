@@ -1,4 +1,4 @@
-from nonebot.adapters.cqhttp import Bot, MessageEvent
+from nonebot.adapters.onebot.v11 import Bot, MessageEvent
 from nonebot import on_command
 
 calc = on_command('calc')

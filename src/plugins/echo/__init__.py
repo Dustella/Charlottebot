@@ -1,4 +1,4 @@
-from nonebot.adapters.cqhttp import MessageEvent,Bot
+from nonebot.adapters.onebot.v11 import MessageEvent,Bot
 from nonebot import on_command
 
 echo=on_command('echo')
