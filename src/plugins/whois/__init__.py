@@ -1,11 +1,9 @@
-from nonebot import get_driver, on_command
+from nonebot import on_command
 from nonebot.adapters.onebot.v11 import Bot, MessageEvent
 from nonebot.log import logger
-from .config import Config
 from requests import get
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
+
 
 whois = on_command('whois')
 

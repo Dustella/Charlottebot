@@ -1,13 +1,8 @@
-from nonebot import get_driver, on_message
-from nonebot.adapters.onebot.v11 import GroupMessageEvent, Bot, Message
-from .config import Config
+from nonebot import on_message
+from nonebot.adapters.onebot.v11 import GroupMessageEvent, Bot
 import json
 
-global_config = get_driver().config
-config = Config(**global_config.dict())
-
 xmll = on_message()
-
 
 @xmll.handle()
 async def lalal(bot: Bot, event: GroupMessageEvent):
@@ -18,7 +13,6 @@ async def lalal(bot: Bot, event: GroupMessageEvent):
         mtype = eventdict['message'][0]['type']
         if mtype == 'xml':
             tsd = str(eventdict['message'][0]['data']['data'])
-            print(message_content)
             await xmll.finish(message=tsd)
         elif mtype == 'text' and message_content.startswith('<?xml'):
             tsd = '[CQ:xml,data='+message_content+']'
