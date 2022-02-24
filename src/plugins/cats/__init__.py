@@ -1,4 +1,4 @@
-from nonebot import on_command, on_keyword
+from nonebot import on_keyword
 from nonebot.adapters.onebot.v11 import Bot, Event, Message
 import httpx
 

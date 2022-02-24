@@ -1,8 +1,4 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/python
-# Edit at https://www.toptal.com/developers/gitignore?templates=python
-
-# well
 data/
 src/plugins/./__pycache__/
 push.bat

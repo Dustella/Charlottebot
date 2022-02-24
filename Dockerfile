@@ -4,7 +4,11 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt .
 
-RUN apk update && apk add --virtual build-dependencies build-base gcc && apk add tzdata && pip install --no-cache-dir -r requirements.txt && apk del build-dependencies
+RUN apk update \
+    && apk add --virtual build-dependencies build-base gcc \
+    && apk add tzdata \
+    && pip install --no-cache-dir -r requirements.txt \
+    && apk del build-dependencies
 
 COPY . .
 
