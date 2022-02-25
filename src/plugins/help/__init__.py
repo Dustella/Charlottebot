@@ -13,5 +13,8 @@ async def help_text(bot: Bot, event: MessageEvent):
     我好菜啊
     .[操作]@人
     猫猫来
+    夸夸
+    舔狗
     """
     await help.finish(help_text)
+
