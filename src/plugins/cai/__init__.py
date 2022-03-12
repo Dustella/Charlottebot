@@ -10,4 +10,4 @@ async def handle_cai(bot: Bot, event: GroupMessageEvent):
     if event.sender.user_id == 732624987:
         await cai.finish("Dustella大菜狗！")
     else:
-        await cai.finish("大佬谦虚啦！")
+        await cai.finish("菜还不去女装？！")
