@@ -6,4 +6,4 @@ echo = on_command('echo')
 
 @echo.handle()
 async def echow(bot: Bot, event: MessageEvent):
-    await echo.finish(event.get_message())
+    await echo.finish(event.get_message()[5:])
