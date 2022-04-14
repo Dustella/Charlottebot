@@ -4,7 +4,6 @@ from nonebot.log import logger
 from requests import get
 
 
-
 whois = on_command('whois')
 
 
@@ -23,3 +22,16 @@ ip: {response_ping["ip"]}
         await whois.finish(tosend)
     except Exception as e:
         await whois.finish(str(e))
+
+
+def getWhois(source: str) -> str:
+    try:
+        response_ping = get(url=f"https://api.ooii.io/ping?host={source}").json()
+        tosend = f"""
+域名：{response_ping["host"]}
+ip: {response_ping["ip"]}
+地点: {response_ping["location"]}
+        """
+        return tosend
+    except:
+        return "获得IP的API发生错误"
