@@ -1,5 +1,5 @@
 from nonebot.adapters.onebot.v11 import MessageEvent, Bot, Message
-from nonebot import on_command
+from nonebot import on_command, on_message
 
 echo = on_command('echo')
 
