@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN apk update \
     && apk add --virtual build-dependencies build-base gcc \
     && apk add tzdata \
-    && pip install --upgrade pip
+    && pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt \
     && apk del build-dependencies
 
