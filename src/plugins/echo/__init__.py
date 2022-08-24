@@ -7,7 +7,7 @@ echo = on_command('echo')
 
 @echo.handle()
 async def echow(bot: Bot, event: MessageEvent):
-    await echo.finish(Message(str(event.get_message())[5:]))
+    await echo.finish(Message(str(event.get_message())[5:].strip()))
 
 xml_echo = on_message()
 
