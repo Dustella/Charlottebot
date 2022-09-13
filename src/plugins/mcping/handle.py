@@ -2,8 +2,8 @@ from typing import List, cast
 
 from mcstatus import JavaServer
 
-from data import Data, Server
-from parser import Namespace
+from .data import Data, Server
+from .parser import Namespace
 
 
 class Handle:
