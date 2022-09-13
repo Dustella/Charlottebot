@@ -12,9 +12,9 @@ from nonebot.adapters.onebot.v11 import (
 from nonebot.params import ShellCommandArgs
 from nonebot.plugin import on_shell_command, require
 
-from nonebot_plugin_mcstatus.data import Data, ServerList
-from nonebot_plugin_mcstatus.handle import Handle
-from nonebot_plugin_mcstatus.parser import ArgNamespace, mc_parser
+from data import Data, ServerList
+from handle import Handle
+from parser import ArgNamespace, mc_parser
 
 scheduler = require("nonebot_plugin_apscheduler").scheduler
 

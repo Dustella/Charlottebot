@@ -1,3 +1,6 @@
 nb-cli
 nonebot-adapter-cqhttp
 hypercorn
+argparse
+pydantic
+mcstatus

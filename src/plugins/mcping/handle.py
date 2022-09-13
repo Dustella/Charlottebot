@@ -2,8 +2,8 @@ from typing import List, cast
 
 from mcstatus import MinecraftServer
 
-from nonebot_plugin_mcstatus.data import Data, Server
-from nonebot_plugin_mcstatus.parser import Namespace
+from data import Data, Server
+from parser import Namespace
 
 
 class Handle:
