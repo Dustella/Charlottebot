@@ -4,3 +4,4 @@ hypercorn
 argparse
 pydantic
 mcstatus
+nonebot_plugin_apscheduler
