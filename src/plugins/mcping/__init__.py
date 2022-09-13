@@ -1,7 +1,7 @@
 from typing import cast
 
 import nonebot
-from mcstatus import MinecraftServer
+from mcstatus import JavaServer
 from nonebot import get_bots
 from nonebot.adapters.onebot.v11 import (
     Bot,
@@ -32,7 +32,7 @@ async def _():
         for id in server_list[type]:
             for server in server_list[type][id]:
                 try:
-                    ping = await MinecraftServer.lookup(server.address).async_ping()
+                    ping = await JavaServer.lookup(server.address).async_ping()
                     status = True
                 except:
                     ping = None
